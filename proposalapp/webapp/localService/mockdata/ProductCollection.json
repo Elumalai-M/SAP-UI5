@@ -1,0 +1,24 @@
+{
+    "ProductCollection": [
+    {
+    "ProductName": "Pineapple",
+    "Quantity": 21
+    },
+    {
+    "ProductName": "Milk",
+    "Quantity": 4
+    },
+    {
+    "ProductName": "Canned Beans",
+    "Quantity": 3
+    },
+    {
+    "ProductName": "Salad",
+    "Quantity": 2
+    },
+    {
+    "ProductName": "Bread",
+    "Quantity": 1
+    }
+    ]
+    }

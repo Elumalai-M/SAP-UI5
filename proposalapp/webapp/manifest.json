@@ -1,0 +1,148 @@
+{
+  "_version": "1.59.0",
+  "sap.app": {
+    "id": "proposalapp",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.12.3",
+      "toolsId": "6b8a3375-dc9a-41a0-9e15-1979b5fd3921"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/v4/ProposalService/",
+        "type": "OData",
+        "settings": {
+          "localUri": "metadata.xml",
+          "annotations": [],
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.120.6",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "proposalapp.i18n.i18n"
+        }
+      }
+    },
+    "product": {
+      "type": "sap.ui.model.json.JSONModel",
+      "uri": "ProductCollection.json"
+      },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "proposalapp.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "RouteTile",
+          "pattern": ":?query:",
+          "target": [
+            "TargetTile"
+          ]
+        },
+        {
+          "name": "RouteProposal",
+          "pattern": "proposal",
+          "target": [
+            "TargetProposal"
+          ]
+        },
+        {
+          "name": "RouteCreateTemplate",
+          "pattern": "createtemplate",
+          "target": [
+            "TargetCreateTemplate"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetTile": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Tile",
+          "viewName": "Tile"
+        },
+        "TargetProposal": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Proposal",
+          "viewName": "Proposal"
+        },
+        "TargetCreateTemplate": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "CreateTemplate",
+          "viewName": "CreateTemplate"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "proposalapp.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}

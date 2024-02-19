@@ -1,0 +1,28 @@
+.fieldContainer {
+    column-gap: 20%;
+}
+
+.vboxcontainer{
+    padding-left: 20%;
+}
+/* .sapMPage {
+    background-color: rgba(53, 42, 207, 0.753);
+}
+
+.sapUiFormResGrid>div{
+    background-color: rgba(67, 56, 230, 0.753);
+}
+
+.sapMLabel .sapMLabelTextWrapper {
+    color:rgb(13, 14, 13);
+    font-weight: bold;
+}
+
+.sapUiFormResGrid.sapUiFormToolbar>div:first-child {
+    background-color:rgba(67, 56, 230, 0.753);
+} */
+
+#container-proposalapp---Proposal--templateDialog{
+width: 90%;
+height: 60%;
+}
